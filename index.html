@@ -352,18 +352,18 @@
           <form class="vg-contact-form">
             <div class="form-row">
               <div class="col-12 mt-3 wow fadeInUp">
-                <input class="form-control" type="text" name="Name" placeholder="Your Name">
+                <input class="form-control" type="text" id="name" placeholder="Your Name">
               </div>
               <div class="col-6 mt-3 wow fadeInUp">
-                <input class="form-control" type="text" name="Email" placeholder="Email Address">
+                <input class="form-control" type="text" id="email" placeholder="Email Address">
               </div>
               <div class="col-6 mt-3 wow fadeInUp">
-                <input class="form-control" type="text" name="Subject" placeholder="Subject">
+                <input class="form-control" type="text" id="subject" placeholder="Subject">
               </div>
               <div class="col-12 mt-3 wow fadeInUp">
-                <textarea class="form-control" name="Message" rows="6" placeholder="Enter message here.."></textarea>
+                <textarea class="form-control" id="message" rows="6" placeholder="Enter message here.."></textarea>
               </div>
-              <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Send Message</button>
+              <button type="button" onclick="sendMail();" class="btn btn-theme mt-3 wow fadeInUp ml-1">Send Message</button>
             </div>
           </form>
         </div>
@@ -415,6 +415,18 @@
   </div> <!-- End footer -->  
   
   <script src="assets/js/jquery-3.5.1.min.js"></script>
+
+  <script src="assets/js/send_email.js"></script>
+
+  <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("LhPol6L9HRAPF2BC8");
+      })();
+    </script>
     
   <script src="assets/js/bootstrap.bundle.min.js"></script>
     
